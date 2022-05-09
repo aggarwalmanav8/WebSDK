@@ -38,9 +38,7 @@
           allowEyesClosed: 'no',
           allowMultipleFaces: 'no',
         });
-        HVFaceModule.start(hvFaceConfig, callback);
-      }
-      callback = (HVError, HVResponse) => {
+        HVFaceModule.start(hvFaceConfig, callback = (HVError, HVResponse) => {
         if (HVError) {
           var para = document.createElement('p');
           var node = document.createTextNode(JSON.stringify(HVError));
@@ -55,6 +53,12 @@
           element.appendChild(para);
         }
       };
+                          
+                          
+                          
+                          );
+      }
+      
     </script>
   </body>
 </html>
